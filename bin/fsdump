@@ -1,0 +1,9 @@
+#!/home/bibi/findburo/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'ZODB==4.0.0a4','console_scripts','fsdump'
+__requires__ = 'ZODB==4.0.0a4'
+import sys
+from pkg_resources import load_entry_point
+
+sys.exit(
+   load_entry_point('ZODB==4.0.0a4', 'console_scripts', 'fsdump')()
+)
