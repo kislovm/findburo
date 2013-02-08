@@ -1,0 +1,49 @@
+2013-02-07 14:34:10 [5331] [INFO] Starting gunicorn 0.17.2
+2013-02-07 14:34:10 [5331] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2013-02-07 14:34:10 [5331] [ERROR] Retrying in 1 second.
+2013-02-07 14:34:11 [5331] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2013-02-07 14:34:11 [5331] [ERROR] Retrying in 1 second.
+2013-02-07 14:34:12 [5331] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2013-02-07 14:34:12 [5331] [ERROR] Retrying in 1 second.
+2013-02-07 14:34:13 [5331] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2013-02-07 14:34:13 [5331] [ERROR] Retrying in 1 second.
+2013-02-07 14:34:14 [5331] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2013-02-07 14:34:14 [5331] [ERROR] Retrying in 1 second.
+2013-02-07 14:34:15 [5331] [ERROR] Can't connect to ('127.0.0.1', 8000)
+2013-02-07 14:34:54 [5349] [INFO] Starting gunicorn 0.17.2
+2013-02-07 14:34:54 [5349] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2013-02-07 14:34:54 [5349] [ERROR] Retrying in 1 second.
+2013-02-07 14:34:55 [5349] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2013-02-07 14:34:55 [5349] [ERROR] Retrying in 1 second.
+2013-02-07 14:34:56 [5349] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2013-02-07 14:34:56 [5349] [ERROR] Retrying in 1 second.
+2013-02-07 14:34:57 [5349] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2013-02-07 14:34:57 [5349] [ERROR] Retrying in 1 second.
+2013-02-07 14:34:58 [5349] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2013-02-07 14:34:58 [5349] [ERROR] Retrying in 1 second.
+2013-02-07 14:34:59 [5349] [ERROR] Can't connect to ('127.0.0.1', 8000)
+2013-02-07 14:35:36 [5369] [INFO] Starting gunicorn 0.17.2
+2013-02-07 14:35:36 [5369] [DEBUG] Arbiter booted
+2013-02-07 14:35:36 [5369] [INFO] Listening at: http://127.0.0.1:8000 (5369)
+2013-02-07 14:35:36 [5369] [INFO] Using worker: sync
+2013-02-07 14:35:36 [5379] [INFO] Booting worker with pid: 5379
+2013-02-07 14:35:36 [5381] [INFO] Booting worker with pid: 5381
+2013-02-07 14:35:36 [5380] [INFO] Booting worker with pid: 5380
+2013-02-07 16:35:47 [5381] [INFO] Worker exiting (pid: 5381)
+2013-02-07 16:35:47 [5380] [INFO] Worker exiting (pid: 5380)
+2013-02-07 14:35:47 [5369] [INFO] Handling signal: int
+2013-02-07 16:35:47 [5379] [INFO] Worker exiting (pid: 5379)
+2013-02-07 14:35:47 [5369] [INFO] Shutting down: Master
+2013-02-07 14:35:56 [5385] [INFO] Starting gunicorn 0.17.2
+2013-02-07 14:35:56 [5385] [DEBUG] Arbiter booted
+2013-02-07 14:35:56 [5385] [INFO] Listening at: http://127.0.0.1:8000 (5385)
+2013-02-07 14:35:56 [5385] [INFO] Using worker: sync
+2013-02-07 14:35:56 [5395] [INFO] Booting worker with pid: 5395
+2013-02-07 14:35:56 [5397] [INFO] Booting worker with pid: 5397
+2013-02-07 14:35:56 [5396] [INFO] Booting worker with pid: 5396
+2013-02-07 16:36:59 [5395] [DEBUG] GET /
+2013-02-07 16:45:58 [5395] [INFO] Worker exiting (pid: 5395)
+2013-02-07 16:45:58 [5396] [INFO] Worker exiting (pid: 5396)
+2013-02-07 16:45:58 [5397] [INFO] Worker exiting (pid: 5397)
+2013-02-07 14:45:58 [5385] [INFO] Handling signal: int
+2013-02-07 14:45:58 [5385] [INFO] Shutting down: Master
