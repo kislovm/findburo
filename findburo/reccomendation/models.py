@@ -18,14 +18,11 @@ class Reccomendation(models.Model):
 	google = models.URLField("Гугл Плэй", blank=True)
 	youtube = models.URLField("Ютуб", blank=True)
 	link = models.URLField("Ссылка", blank=True)
-<<<<<<< HEAD
-
-=======
 	def get_domain(self):
 		return urlparse(self.link).netloc
 	def photo(self):
-		return get_thumbnail(self.image, '100x100', crop='center', quality=99)
->>>>>>> fa9ef8fb703113d360177cdd81169cf715442ac3
+		return get_thumbnail(self.image, '600', quality=99)
+
 	category = models.ManyToManyField(Category)
 	pubDate = models.DateTimeField("Дата публикации", auto_now_add = True)
 

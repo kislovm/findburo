@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load thumbnail %}
 
 {% block content %}
 	    <section class="content">
@@ -21,7 +22,7 @@
             <section class="recs-holder">
             	{% for reccomendation in reccomendation_list %}
                 <article class="rec">
-		    <a href="{{ reccomendation.link }}"><img class="rec-illustration" src="{{ reccomendation.image.url }}" alt="{{ reccomendation.name }}"></a>
+		    <a href="{{ reccomendation.link }}"><img class="rec-illustration" src="{{ reccomendation.photo.url }}" alt="{{ reccomendation.name }}"></a>
                     <h1>{{ reccomendation.name }}</h1>
                     <p>{{ reccomendation.about }}</p>
                     <p><a href="{{ reccomendation.link }}">Видеоролики Angry Birds по-русски</a></p>

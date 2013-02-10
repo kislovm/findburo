@@ -204,3 +204,85 @@
 2013-02-10 11:41:55 [1561] [DEBUG] GET /admin/
 2013-02-10 11:41:56 [1562] [DEBUG] GET /
 2013-02-10 11:41:58 [1562] [DEBUG] GET /
+2013-02-10 11:43:19 [1562] [DEBUG] GET /
+2013-02-10 11:44:12 [1561] [DEBUG] GET /
+2013-02-10 11:44:45 [1563] [DEBUG] GET /
+2013-02-10 11:44:47 [1563] [DEBUG] GET /
+2013-02-10 11:44:53 [1562] [DEBUG] GET /
+2013-02-10 11:45:09 [1562] [DEBUG] GET /
+2013-02-10 11:45:22 [1563] [DEBUG] GET /
+2013-02-10 11:45:41 [1562] [DEBUG] GET /
+2013-02-10 11:45:43 [1561] [DEBUG] GET /
+2013-02-10 11:49:12 [1562] [DEBUG] GET /
+2013-02-10 11:49:13 [1561] [DEBUG] GET /
+2013-02-10 11:50:02 [1562] [DEBUG] GET /
+2013-02-10 11:50:03 [1562] [DEBUG] GET /
+2013-02-10 17:50:21 [5189] [INFO] Starting gunicorn 0.17.2
+2013-02-10 17:50:21 [5189] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2013-02-10 17:50:21 [5189] [ERROR] Retrying in 1 second.
+2013-02-10 17:50:22 [5189] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2013-02-10 17:50:22 [5189] [ERROR] Retrying in 1 second.
+2013-02-10 17:50:23 [5189] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2013-02-10 17:50:23 [5189] [ERROR] Retrying in 1 second.
+2013-02-10 17:50:23 [5189] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2013-02-10 17:50:23 [5189] [ERROR] Retrying in 1 second.
+2013-02-10 17:50:24 [5189] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2013-02-10 17:50:24 [5189] [ERROR] Retrying in 1 second.
+2013-02-10 17:50:25 [5189] [ERROR] Can't connect to ('127.0.0.1', 8000)
+2013-02-10 17:50:41 [1555] [INFO] Handling signal: term
+2013-02-10 11:50:41 [1561] [INFO] Worker exiting (pid: 1561)
+2013-02-10 11:50:41 [1562] [INFO] Worker exiting (pid: 1562)
+2013-02-10 11:50:41 [1563] [INFO] Worker exiting (pid: 1563)
+2013-02-10 17:50:41 [1555] [INFO] Shutting down: Master
+2013-02-10 17:50:44 [5197] [INFO] Starting gunicorn 0.17.2
+2013-02-10 17:50:44 [5197] [DEBUG] Arbiter booted
+2013-02-10 17:50:44 [5197] [INFO] Listening at: http://127.0.0.1:8000 (5197)
+2013-02-10 17:50:44 [5197] [INFO] Using worker: sync
+2013-02-10 17:50:44 [5203] [INFO] Booting worker with pid: 5203
+2013-02-10 17:50:44 [5204] [INFO] Booting worker with pid: 5204
+2013-02-10 17:50:44 [5205] [INFO] Booting worker with pid: 5205
+2013-02-10 11:50:53 [5205] [DEBUG] GET /
+2013-02-10 11:51:04 [5204] [INFO] Worker exiting (pid: 5204)
+2013-02-10 11:51:04 [5203] [INFO] Worker exiting (pid: 5203)
+2013-02-10 11:51:04 [5205] [INFO] Worker exiting (pid: 5205)
+2013-02-10 17:51:05 [5197] [INFO] Handling signal: int
+2013-02-10 17:51:05 [5197] [INFO] Shutting down: Master
+2013-02-10 17:51:52 [5217] [INFO] Starting gunicorn 0.17.2
+2013-02-10 17:51:52 [5217] [DEBUG] Arbiter booted
+2013-02-10 17:51:52 [5217] [INFO] Listening at: http://127.0.0.1:8000 (5217)
+2013-02-10 17:51:52 [5217] [INFO] Using worker: sync
+2013-02-10 17:51:52 [5223] [INFO] Booting worker with pid: 5223
+2013-02-10 17:51:52 [5224] [INFO] Booting worker with pid: 5224
+2013-02-10 17:51:52 [5225] [INFO] Booting worker with pid: 5225
+2013-02-10 11:51:54 [5224] [DEBUG] GET /
+2013-02-10 11:52:17 [5224] [DEBUG] GET /
+2013-02-10 17:52:48 [5217] [INFO] Handling signal: term
+2013-02-10 11:52:48 [5223] [INFO] Worker exiting (pid: 5223)
+2013-02-10 11:52:48 [5224] [INFO] Worker exiting (pid: 5224)
+2013-02-10 11:52:48 [5225] [INFO] Worker exiting (pid: 5225)
+2013-02-10 17:52:48 [5217] [INFO] Shutting down: Master
+2013-02-10 17:52:50 [5232] [INFO] Starting gunicorn 0.17.2
+2013-02-10 17:52:50 [5232] [DEBUG] Arbiter booted
+2013-02-10 17:52:50 [5232] [INFO] Listening at: http://127.0.0.1:8000 (5232)
+2013-02-10 17:52:50 [5232] [INFO] Using worker: sync
+2013-02-10 17:52:50 [5238] [INFO] Booting worker with pid: 5238
+2013-02-10 17:52:50 [5239] [INFO] Booting worker with pid: 5239
+2013-02-10 17:52:50 [5240] [INFO] Booting worker with pid: 5240
+2013-02-10 11:52:52 [5240] [DEBUG] GET /
+2013-02-10 11:52:52 [5239] [DEBUG] GET /
+2013-02-10 11:52:52 [5240] [DEBUG] Ignoring EPIPE
+2013-02-10 11:52:53 [5239] [DEBUG] GET /
+2013-02-10 11:53:04 [5239] [DEBUG] GET /
+2013-02-10 17:53:07 [5232] [INFO] Handling signal: term
+2013-02-10 11:53:07 [5238] [INFO] Worker exiting (pid: 5238)
+2013-02-10 11:53:07 [5239] [INFO] Worker exiting (pid: 5239)
+2013-02-10 11:53:07 [5240] [INFO] Worker exiting (pid: 5240)
+2013-02-10 17:53:07 [5232] [INFO] Shutting down: Master
+2013-02-10 17:53:08 [5246] [INFO] Starting gunicorn 0.17.2
+2013-02-10 17:53:08 [5246] [DEBUG] Arbiter booted
+2013-02-10 17:53:08 [5246] [INFO] Listening at: http://127.0.0.1:8000 (5246)
+2013-02-10 17:53:08 [5246] [INFO] Using worker: sync
+2013-02-10 17:53:08 [5252] [INFO] Booting worker with pid: 5252
+2013-02-10 17:53:08 [5253] [INFO] Booting worker with pid: 5253
+2013-02-10 17:53:08 [5254] [INFO] Booting worker with pid: 5254
+2013-02-10 11:53:09 [5252] [DEBUG] GET /
