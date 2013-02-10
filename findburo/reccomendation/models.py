@@ -6,7 +6,6 @@ from sorl.thumbnail import ImageField
 class Category(models.Model):
 	key = models.CharField(max_length=50)
 	name = models.CharField(max_length=100)
-	image = ImageField(upload_to='category', null=True)
 	def __unicode__(self):
 		return self.name
 
