@@ -1,7 +1,8 @@
 #coding: utf-8
 
 from django.db import models
-from sorl.thumbnail import ImageField
+from sorl.thumbnail import ImageField, get_thumbnail
+from urlparse import urlparse
 
 class Category(models.Model):
 	key = models.CharField(max_length=50)
@@ -17,7 +18,14 @@ class Reccomendation(models.Model):
 	google = models.URLField("Гугл Плэй", blank=True)
 	youtube = models.URLField("Ютуб", blank=True)
 	link = models.URLField("Ссылка", blank=True)
+<<<<<<< HEAD
 
+=======
+	def get_domain(self):
+		return urlparse(self.link).netloc
+	def photo(self):
+		return get_thumbnail(self.image, '100x100', crop='center', quality=99)
+>>>>>>> fa9ef8fb703113d360177cdd81169cf715442ac3
 	category = models.ManyToManyField(Category)
 	pubDate = models.DateTimeField("Дата публикации", auto_now_add = True)
 
