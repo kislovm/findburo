@@ -1,7 +1,7 @@
 #coding: utf-8
 
 from django.db import models
-from sorl.thumbnail import ImageField
+from sorl.thumbnail import ImageField, get_thumbnail
 from urlparse import urlparse
 
 class Category(models.Model):
@@ -20,7 +20,8 @@ class Reccomendation(models.Model):
 	link = models.URLField("Ссылка", blank=True)
 	def get_domain(self):
 		return urlparse(self.link).netloc
-
+	def photo(self):
+		return get_thumbnail(self.image, '100x100', crop='center', quality=99)
 	category = models.ManyToManyField(Category)
 	pubDate = models.DateTimeField("Дата публикации", auto_now_add = True)
 

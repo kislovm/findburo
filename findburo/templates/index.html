@@ -22,9 +22,7 @@
             <section class="recs-holder">
             	{% for reccomendation in reccomendation_list %}
                 <article class="rec">
-                	{% thumbnail item.image "600x" as im %}
-					    <a href="{{ reccomendation.link }}"><img class="rec-illustration" src="{{ im.url }}" alt="{{ reccomendation.name }}"></a>
-					{% endthumbnail %}
+					    <a href="{{ reccomendation.link }}"><img class="rec-illustration" src="{{ reccomendation.image.url }}" alt="{{ reccomendation.name }}"></a>
                     <h1>{{ reccomendation.name }}</h1>
                     <p>{{ reccomendation.about }}</p>
                     <p><a href="{{ reccomendation.link }}">Видеоролики Angry Birds по-русски</a></p>
