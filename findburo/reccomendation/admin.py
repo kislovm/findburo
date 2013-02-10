@@ -4,7 +4,7 @@ from sorl.thumbnail.admin import AdminImageMixin
 
 
 class ReccomendationAdmin(AdminImageMixin, admin.ModelAdmin):
-	list_display = ('image','name', 'pubDate')
+	list_display = ('name', 'pubDate')
 
 admin.site.register(Category)
 admin.site.register(Reccomendation, ReccomendationAdmin)
