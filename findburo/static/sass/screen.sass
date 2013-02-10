@@ -1,0 +1,205 @@
+// Imports
+@import "compass/reset"
+@import "compass"
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic)
+
+
+// Variables 
+$default-border-radius: 5px
+$icons: sprite-map("icons/*.png")
+
+
+// Mixins
+=arrow-shape($point)
+    $opposite: opposite-position($point)
+    border: 25px solid transparent
+    border-#{$opposite}: 25px solid #fff
+    border-#{$point}: 0
+    height: 0
+    width: 0
+
+
+// Main
+body 
+    -webkit-font-smoothing: antialiased
+    font-family: 'PT Sans', sans-serif
+    font-size: 62.5%
+    line-height: 1.8em
+    &.wood
+        background: image-url('bg.jpg') repeat #e7d1ae
+    &.gray
+        background: image-url('bg3.png') repeat #e7d1ae
+    &.blue
+        background: image-url('bg2.png') repeat #e7d1ae
+.site-main-header
+    font-size: 1.8em
+    +background(linear-gradient(top, #464c56 ,#464c57 35%, #393f48))
+    width: 100%
+    height: 40px
+    +single-box-shadow(rgba(0,0,0,.55), 0, 1px, 1px, 0)
+    position: fixed
+    z-index: 10
+
+.inner 
+    width: 100%
+    max-width: 960px
+    margin: 0 auto
+    position: relative
+
+a 
+    +link-colors(#2970c4, #21599f, #1b4982, #2970c4, #21599f)
+    text-decoration: none
+
+.logo 
+    background: image-url('logo.png')
+    display: block
+    float: left
+    height: image-height('logo.png') 
+    width: image-width('logo.png')
+
+.add-recomendation 
+    font-size: .8em
+    color: rgba(255,255,255,.7) !important
+    margin: 10px 0 0
+    float: right
+    .icn-plus 
+        margin: 0 0 -4px 7px
+    &:hover 
+        color: rgba(255,255,255,1) !important
+        .icn-plus
+            +sprite-dimensions($icons, plus-hover)
+            background-position: sprite-position($icons, plus-hover)
+
+
+// Themes navigation
+.themes-list-holder 
+    font-size: 1.6em
+    background: rgba(255,255,255,.65)
+    width: 260px
+    +border-left-radius
+    position: fixed
+    top: 65px
+
+.theme-item 
+    display: block
+    height: 50px
+    border-bottom: solid 1px rgba(0,0,0,.05)
+    +single-transition(all, 170ms, ease-in-out, 1ms)
+    cursor: pointer
+    @extend %group
+    &:first-child
+        +border-top-left-radius
+    &:last-child
+        border: none
+        +border-bottom-left-radius
+    &:hover 
+        background: rgba(255,255,255,.5)
+    &.selected 
+        background: #fff
+        padding-left: 15px
+        cursor: default
+
+.theme-icon-holder 
+    float: left
+    width: 50px
+
+.theme-icn 
+    margin: 6px 10px 4px
+    +border-radius
+    +single-box-shadow(rgba(0,0,0,.8), 0, 2px, 2px, -1px)
+
+.theme-name 
+    float: left
+    margin: 17px 10px 0 
+
+.active-arrow 
+    +arrow-shape(right)
+    position: absolute
+    right: 0
+    +opacity(0)
+    +single-transition(all, 200ms, ease-in-out, 1ms)
+    .theme-item.selected &
+        right: -25px
+        +opacity(1)
+
+
+// Recommendations
+.recs-holder
+    background: rgba(0,0,0,.1)
+    float: right
+    width: 72.91666667%
+    margin: 40px 0 -3px
+    +single-box-shadow(rgba(0,0,0,.3), 0, 0, 2px, 1px, inset)
+
+.rec 
+    background: #fff
+    width: 85.71428571%
+    margin: 25px auto 50px
+    padding-bottom: 15px
+    +border-radius
+    +single-box-shadow(rgba(0,0,0,.35), 0, 1px, 2px, 0px)
+    position: relative
+    &:after 
+        content: ''
+        background: rgba(255,255,255,.2)
+        width: 80%
+        height: 1px
+        margin: 0 auto
+        +single-box-shadow(rgba(0,0,0,.07), 0, 1px, 0, 0)
+        position: absolute
+        bottom: -25px
+        left: 10%
+    h1 
+        font-size: 2.2em
+        font-weight: bold
+        padding: .5em 5%
+    p 
+        font-size: 1.4em
+        padding: .5em 5%
+        a
+            border-bottom: solid 1px adjust-lightness(#2970c4, 45%)
+
+.rec-illustration
+    width: 100%
+    margin: 0 auto
+    +border-top-radius
+.tag 
+    font-size: 0.9em
+    color: white !important
+    display: inline-block
+    margin-right: 5px
+    padding: 3px 7px 2px
+    +border-radius(5px)
+    +opacity(.7)
+    &:hover
+        +opacity(100)
+.youtube-tag
+    background: #d21015
+.home-tag
+    background: #346cd2
+.apple-tag
+    background: #a39fa7
+.android-tag
+    background: #51a72c
+
+// Icons
+i
+    background: $icons
+    display: inline-block
+
+@each $icon in sprite_names($icons)
+    .icn-#{$icon}
+        +sprite-dimensions($icons, $icon)
+        background-position: sprite-position($icons, $icon)
+
+
+// Fix
+%group, .group
+    &:after
+        content: ''
+        display: table
+        clear: both
+
+ 
+
+

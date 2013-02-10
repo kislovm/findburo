@@ -47,3 +47,157 @@
 2013-02-07 16:45:58 [5397] [INFO] Worker exiting (pid: 5397)
 2013-02-07 14:45:58 [5385] [INFO] Handling signal: int
 2013-02-07 14:45:58 [5385] [INFO] Shutting down: Master
+./gunicorn.sh: /home/bibi/findburo/findburo/../bin/gunicorn_django: /home/bibi/findburo/bin/python: bad interpreter: No such file or directory
+./gunicorn.sh: line 12: /home/bibi/findburo/findburo/../bin/gunicorn_django: Success
+./gunicorn.sh: /home/bibi/findburo/findburo/../bin/gunicorn_django: /home/bibi/findburo/bin/python: bad interpreter: No such file or directory
+./gunicorn.sh: line 12: /home/bibi/findburo/findburo/../bin/gunicorn_django: Success
+./gunicorn.sh: line 11: /bin/gunicorn_django: No such file or directory
+./gunicorn.sh: line 11: /bin/gunicorn_django: No such file or directory
+2013-02-10 16:22:41 [1412] [INFO] Starting gunicorn 0.17.2
+2013-02-10 16:22:41 [1412] [DEBUG] Arbiter booted
+2013-02-10 16:22:41 [1412] [INFO] Listening at: http://127.0.0.1:8000 (1412)
+2013-02-10 16:22:41 [1412] [INFO] Using worker: sync
+2013-02-10 16:22:41 [1418] [INFO] Booting worker with pid: 1418
+2013-02-10 16:22:41 [1419] [INFO] Booting worker with pid: 1419
+2013-02-10 16:22:41 [1420] [INFO] Booting worker with pid: 1420
+2013-02-10 10:23:04 [1420] [INFO] Worker exiting (pid: 1420)
+2013-02-10 10:23:04 [1419] [INFO] Worker exiting (pid: 1419)
+2013-02-10 10:23:04 [1418] [INFO] Worker exiting (pid: 1418)
+2013-02-10 16:23:04 [1412] [INFO] Handling signal: int
+2013-02-10 16:23:04 [1412] [INFO] Shutting down: Master
+2013-02-10 16:24:18 [1426] [INFO] Starting gunicorn 0.17.2
+2013-02-10 16:24:18 [1426] [DEBUG] Arbiter booted
+2013-02-10 16:24:18 [1426] [INFO] Listening at: http://127.0.0.1:8000 (1426)
+2013-02-10 16:24:18 [1426] [INFO] Using worker: sync
+2013-02-10 16:24:18 [1432] [INFO] Booting worker with pid: 1432
+2013-02-10 16:24:18 [1433] [INFO] Booting worker with pid: 1433
+2013-02-10 16:24:18 [1434] [INFO] Booting worker with pid: 1434
+2013-02-10 16:24:28 [1426] [INFO] Handling signal: int
+2013-02-10 10:24:28 [1434] [INFO] Worker exiting (pid: 1434)
+2013-02-10 10:24:28 [1433] [INFO] Worker exiting (pid: 1433)
+2013-02-10 10:24:28 [1432] [INFO] Worker exiting (pid: 1432)
+2013-02-10 16:24:28 [1426] [INFO] Shutting down: Master
+2013-02-10 16:24:39 [1439] [INFO] Starting gunicorn 0.17.2
+2013-02-10 16:24:39 [1439] [DEBUG] Arbiter booted
+2013-02-10 16:24:39 [1439] [INFO] Listening at: http://127.0.0.1:8000 (1439)
+2013-02-10 16:24:39 [1439] [INFO] Using worker: sync
+2013-02-10 16:24:39 [1445] [INFO] Booting worker with pid: 1445
+2013-02-10 16:24:39 [1446] [INFO] Booting worker with pid: 1446
+2013-02-10 16:24:39 [1447] [INFO] Booting worker with pid: 1447
+2013-02-10 16:25:40 [1439] [INFO] Handling signal: int
+2013-02-10 10:25:40 [1447] [INFO] Worker exiting (pid: 1447)
+2013-02-10 10:25:40 [1446] [INFO] Worker exiting (pid: 1446)
+2013-02-10 10:25:40 [1445] [INFO] Worker exiting (pid: 1445)
+2013-02-10 16:25:40 [1439] [INFO] Shutting down: Master
+2013-02-10 16:33:09 [1513] [INFO] Starting gunicorn 0.17.2
+2013-02-10 16:33:09 [1513] [DEBUG] Arbiter booted
+2013-02-10 16:33:09 [1513] [INFO] Listening at: http://127.0.0.1:8000 (1513)
+2013-02-10 16:33:09 [1513] [INFO] Using worker: sync
+2013-02-10 16:33:09 [1519] [INFO] Booting worker with pid: 1519
+2013-02-10 16:33:09 [1520] [INFO] Booting worker with pid: 1520
+2013-02-10 16:33:09 [1521] [INFO] Booting worker with pid: 1521
+2013-02-10 16:33:13 [1513] [INFO] Handling signal: int
+2013-02-10 10:33:13 [1521] [INFO] Worker exiting (pid: 1521)
+2013-02-10 10:33:13 [1520] [INFO] Worker exiting (pid: 1520)
+2013-02-10 10:33:13 [1519] [INFO] Worker exiting (pid: 1519)
+2013-02-10 16:33:13 [1513] [INFO] Shutting down: Master
+2013-02-10 16:34:32 [1543] [INFO] Starting gunicorn 0.17.2
+2013-02-10 16:34:32 [1543] [DEBUG] Arbiter booted
+2013-02-10 16:34:32 [1543] [INFO] Listening at: http://127.0.0.1:8000 (1543)
+2013-02-10 16:34:32 [1543] [INFO] Using worker: sync
+2013-02-10 16:34:32 [1549] [INFO] Booting worker with pid: 1549
+2013-02-10 16:34:32 [1550] [INFO] Booting worker with pid: 1550
+2013-02-10 16:34:32 [1551] [INFO] Booting worker with pid: 1551
+2013-02-10 10:34:38 [1550] [DEBUG] GET /
+2013-02-10 10:34:38 [1551] [DEBUG] GET /static/stylesheets/screen.css
+2013-02-10 10:34:39 [1551] [DEBUG] GET /favicon.ico
+2013-02-10 10:34:39 [1551] [DEBUG] GET /favicon.ico
+2013-02-10 10:34:40 [1551] [DEBUG] GET /
+2013-02-10 10:34:40 [1551] [DEBUG] GET /static/stylesheets/screen.css
+2013-02-10 10:34:47 [1551] [INFO] Worker exiting (pid: 1551)
+2013-02-10 10:34:47 [1550] [INFO] Worker exiting (pid: 1550)
+2013-02-10 10:34:47 [1549] [INFO] Worker exiting (pid: 1549)
+2013-02-10 16:34:47 [1543] [INFO] Handling signal: int
+2013-02-10 16:34:47 [1543] [INFO] Shutting down: Master
+2013-02-10 16:34:53 [1555] [INFO] Starting gunicorn 0.17.2
+2013-02-10 16:34:53 [1555] [DEBUG] Arbiter booted
+2013-02-10 16:34:53 [1555] [INFO] Listening at: http://127.0.0.1:8000 (1555)
+2013-02-10 16:34:53 [1555] [INFO] Using worker: sync
+2013-02-10 16:34:53 [1561] [INFO] Booting worker with pid: 1561
+2013-02-10 16:34:53 [1562] [INFO] Booting worker with pid: 1562
+2013-02-10 16:34:53 [1563] [INFO] Booting worker with pid: 1563
+2013-02-10 10:37:01 [1563] [DEBUG] GET /
+2013-02-10 10:37:02 [1563] [DEBUG] GET /
+2013-02-10 10:37:02 [1563] [DEBUG] GET /
+2013-02-10 10:37:02 [1563] [DEBUG] GET /
+2013-02-10 10:37:03 [1563] [DEBUG] GET /
+2013-02-10 10:37:03 [1563] [DEBUG] GET /
+2013-02-10 10:37:03 [1563] [DEBUG] GET /
+2013-02-10 10:37:04 [1563] [DEBUG] GET /
+2013-02-10 10:37:04 [1563] [DEBUG] GET /
+2013-02-10 10:37:05 [1563] [DEBUG] GET /
+2013-02-10 10:38:18 [1563] [DEBUG] GET /
+2013-02-10 10:38:20 [1561] [DEBUG] GET /
+2013-02-10 10:38:22 [1561] [DEBUG] GET /
+2013-02-10 10:38:26 [1561] [DEBUG] GET /
+2013-02-10 10:50:30 [1561] [DEBUG] GET /
+2013-02-10 10:50:31 [1561] [DEBUG] GET /
+2013-02-10 10:50:32 [1561] [DEBUG] GET /
+2013-02-10 10:50:32 [1561] [DEBUG] GET /
+2013-02-10 10:52:04 [1561] [DEBUG] GET /
+2013-02-10 10:52:04 [1561] [DEBUG] GET /static/stylesheets/screen.css
+2013-02-10 10:52:05 [1561] [DEBUG] GET /
+2013-02-10 10:52:05 [1561] [DEBUG] GET /static/stylesheets/screen.css
+2013-02-10 10:52:06 [1561] [DEBUG] GET /
+2013-02-10 10:52:06 [1561] [DEBUG] GET /static/stylesheets/screen.css
+2013-02-10 10:52:07 [1561] [DEBUG] GET /
+2013-02-10 10:52:07 [1561] [DEBUG] GET /static/stylesheets/screen.css
+2013-02-10 10:52:07 [1561] [DEBUG] GET /
+2013-02-10 10:52:07 [1561] [DEBUG] GET /static/stylesheets/screen.css
+2013-02-10 10:52:08 [1561] [DEBUG] GET /
+2013-02-10 10:52:08 [1561] [DEBUG] GET /static/stylesheets/screen.css
+2013-02-10 10:52:36 [1563] [DEBUG] GET /static
+2013-02-10 10:53:08 [1561] [DEBUG] GET /static
+2013-02-10 10:53:09 [1561] [DEBUG] GET /static
+2013-02-10 10:53:09 [1561] [DEBUG] GET /static
+2013-02-10 10:53:10 [1561] [DEBUG] GET /static
+2013-02-10 10:53:10 [1561] [DEBUG] GET /static
+2013-02-10 10:53:10 [1561] [DEBUG] GET /static
+2013-02-10 10:53:10 [1561] [DEBUG] GET /static
+2013-02-10 10:53:10 [1561] [DEBUG] GET /static
+2013-02-10 10:53:11 [1561] [DEBUG] GET /static
+2013-02-10 10:53:11 [1562] [DEBUG] GET /static
+2013-02-10 10:53:11 [1562] [DEBUG] GET /static
+2013-02-10 10:53:18 [1562] [DEBUG] GET /
+2013-02-10 10:53:19 [1562] [DEBUG] GET /
+2013-02-10 10:53:33 [1563] [DEBUG] GET /
+2013-02-10 10:53:36 [1562] [DEBUG] GET /
+2013-02-10 10:53:56 [1562] [DEBUG] GET /admin
+2013-02-10 10:53:56 [1561] [DEBUG] GET /admin/
+2013-02-10 10:53:58 [1561] [DEBUG] GET /admin/
+2013-02-10 10:56:23 [1563] [DEBUG] GET /admin/
+2013-02-10 10:56:23 [1563] [DEBUG] GET /admin/
+2013-02-10 10:57:02 [1561] [DEBUG] GET /admin/
+2013-02-10 10:57:03 [1561] [DEBUG] GET /admin/
+2013-02-10 10:57:03 [1561] [DEBUG] GET /admin/
+2013-02-10 10:57:04 [1561] [DEBUG] GET /admin/
+2013-02-10 10:57:30 [1562] [DEBUG] GET /admin/
+2013-02-10 10:58:38 [1561] [DEBUG] GET /admin/
+2013-02-10 10:58:39 [1563] [DEBUG] GET /admin/
+2013-02-10 10:58:39 [1563] [DEBUG] GET /admin/
+2013-02-10 11:00:42 [1563] [DEBUG] GET /
+2013-02-10 11:00:42 [1563] [DEBUG] GET /favicon.ico
+2013-02-10 11:00:47 [1562] [DEBUG] GET /admin
+2013-02-10 11:00:47 [1562] [DEBUG] GET /admin/
+2013-02-10 11:00:47 [1562] [DEBUG] GET /favicon.ico
+2013-02-10 11:00:48 [1561] [DEBUG] GET /admin/
+2013-02-10 11:00:48 [1561] [DEBUG] GET /favicon.ico
+2013-02-10 11:16:01 [1561] [DEBUG] GET /
+2013-02-10 11:16:02 [1561] [DEBUG] GET /favicon.ico
+2013-02-10 11:16:02 [1561] [DEBUG] GET /
+2013-02-10 11:16:02 [1561] [DEBUG] GET /favicon.ico
+2013-02-10 11:16:03 [1561] [DEBUG] GET /
+2013-02-10 11:16:03 [1561] [DEBUG] GET /favicon.ico
+2013-02-10 11:26:12 [1563] [DEBUG] GET /admin/
+2013-02-10 11:26:19 [1561] [DEBUG] GET /admin/
+2013-02-10 11:32:23 [1562] [DEBUG] GET /admin/
