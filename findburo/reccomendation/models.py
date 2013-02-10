@@ -16,7 +16,7 @@ class Reccomendation(models.Model):
 	youtube = models.URLField("Ютуб")
 	link = models.URLField("Ссылка")
 
-	category = models.ForeignKey(Category)
+	category = models.ManyToManyField(Category)
 	pubDate = models.DateTimeField("Дата публикации", auto_now_add = True)
 
 	def __unicode__(self):

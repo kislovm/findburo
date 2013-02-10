@@ -1,0 +1,149 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <title>Бюро находок</title>
+    <link href="/static/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function() {
+            $('.theme-item').click(function(event){
+                $('.theme-item').removeClass('selected');
+                $(this).addClass('selected');
+                if($(this).hasClass('grayBg') == true) {
+                    $('body').removeClass().addClass('gray')
+                } else if($(this).hasClass('woodBg') == true) {
+                    $('body').removeClass().addClass('wood')
+                } else if($(this).hasClass('blueBg') == true) {
+                    $('body').removeClass().addClass('blue')
+                }
+            });
+        });
+    </script>
+</head>
+<body class="wood">
+    <header class="site-main-header">
+        <div class="inner">
+            <a href="/" class="logo"></a>
+            <a href="#" class="add-recomendation">Добавить рекомендацию <i class="icn-plus"></i></a>
+        </div>
+    </header>
+
+    <section class="content">
+        <div class="inner">
+
+            <aside class="themes-list-holder">
+                <ul class="theme-list">
+                    <li class="theme-item">
+                        <div class="active-arrow"></div>
+                        <div class="theme-icon-holder">
+                            <i class="theme-icn icn-apps"></i>
+                        </div>
+                        <span class="theme-name">Cервисы и приложения</span>
+                    </li>
+                    <li class="theme-item">
+                        <div class="active-arrow"></div>
+                        <div class="theme-icon-holder">
+                            <i class="theme-icn icn-games"></i>
+                        </div>
+                        <span class="theme-name">Игры</span>
+                    </li>
+                     <li class="theme-item">
+                        <div class="active-arrow"></div>
+                        <div class="theme-icon-holder">
+                            <i class="theme-icn icn-food"></i>
+                        </div>
+                        <span class="theme-name">Вкусная еда</span>
+                    </li>
+                    <li class="theme-item">
+                        <div class="active-arrow"></div>
+                        <div class="theme-icon-holder">
+                            <i class="theme-icn icn-personal"></i>
+                        </div>
+                        <span class="theme-name">Прокачать себя</span>
+                    </li>
+                    <li class="theme-item">
+                        <div class="active-arrow"></div>
+                        <div class="theme-icon-holder">
+                            <i class="theme-icn icn-city"></i>
+                        </div>
+                        <span class="theme-name">Развлечения в городе </span>
+                    </li>
+                    <li class="theme-item">
+                        <div class="active-arrow"></div>
+                        <div class="theme-icon-holder">
+                            <i class="theme-icn icn-handmade"></i>
+                        </div>
+                        <span class="theme-name">Рукоделие</span>
+                    </li>
+                    <li class="theme-item">
+                        <div class="active-arrow"></div>
+                        <div class="theme-icon-holder">
+                            <i class="theme-icn icn-deals"></i>
+                        </div>
+                        <span class="theme-name">Купоны и скидки</span>
+                    </li>
+                    <!-- <li class="theme-item">
+                        <div class="active-arrow"></div>
+                        <div class="theme-icon-holder">
+                            <i class="theme-icn icn-interesting"></i>
+                        </div>
+                        <span class="theme-name">Интересное</span>
+                    </li>
+                    <li class="theme-item">
+                        <div class="active-arrow"></div>
+                        <div class="theme-icon-holder">
+                            <i class="theme-icn icn-clothes"></i>
+                        </div>
+                        <span class="theme-name">Одежда и аксесуары </span>
+                    </li> -->
+                    <li class="theme-item selected woodBg">
+                        <div class="active-arrow"></div>
+                        <span class="theme-name">Дерево</span>
+                    </li>
+                    <li class="theme-item grayBg">
+                        <div class="active-arrow"></div>
+                        <span class="theme-name">Серый</span>
+                    </li>
+                    <li class="theme-item blueBg">
+                        <div class="active-arrow"></div>
+                        <span class="theme-name">Синий</span>
+                    </li>
+                </ul>
+            </aside>
+
+            <section class="recs-holder">
+                <article class="rec">
+                    <a href="#"><img class="rec-illustration" src="http://img-fotki.yandex.ru/get/6416/31684961.0/0_57718_8b34c7d4_L.jpg" alt=""></a>
+                    <h1>Angry Birds</h1>
+                    <p><b>Angry Birds</b> — это игра уже по праву может считаться легендарной. На ее счету огромное количество рекордов, никому не известные разработчики Angry Birds стали популярными на весь мир и до сих пор эта игра прорывается в топы App Store. Стоит признать, что некоторое время назад пользователи оценивали успешность мобильной операционной платформы по наличию в ней именно этой игры.</p>
+                    <p>На днях стало известно, что разработчики собираются выпустить новую версию своей популярной аркады.</p>
+                    <p><a href="#">Видеоролики Angry Birds по-русски</a></p>
+                    <p>
+                        <a class="tag home-tag"href="#">www.angrybirds.com</a>
+                        <a class="tag youtube-tag"href="#">YouTube</a>
+                    </p>
+                </article>
+
+                <article class="rec">
+                    <a href="#"><img class="rec-illustration" src="http://img-fotki.yandex.ru/get/6417/31684961.0/0_57719_2d4c6a7_L.jpg" alt=""></a>
+                    <h1>Cut the Rope</h1>
+                    <p>Самая знаменитая игра головоломка Cut the Rope. Со помощью этой знаменитой игры можно развивать логику и абстрактное мышление. Игра основана на физике.</p>
+                    <p>В коробке сидит маленькое зелёное существо АмНям, которое надо кормить леденцами. Леденцы болтаются на веревочках и их надо правильно перерезать, чтобы леденец упал точно в пасть АмНяма, а не мимо.</p>
+                    <p><a href="#">Официальная страница игры</a></p>
+                    <p>
+                        <a class="tag home-tag"href="#">www.cuttherope.ie</a>
+                        <a class="tag apple-tag"href="#">App Store</a>
+                        <a class="tag android-tag"href="#">Android</a>
+                    </p>
+                </article>
+            </section>
+
+        </div><!-- inner -->
+    </section><!-- content -->
+
+    <footer></footer>
+</body>
+</html>
