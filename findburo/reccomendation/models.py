@@ -2,6 +2,7 @@
 
 from django.db import models
 from sorl.thumbnail import ImageField
+from urlparse import urlparse
 
 class Category(models.Model):
 	key = models.CharField(max_length=50)
@@ -17,6 +18,8 @@ class Reccomendation(models.Model):
 	google = models.URLField("Гугл Плэй", blank=True)
 	youtube = models.URLField("Ютуб", blank=True)
 	link = models.URLField("Ссылка", blank=True)
+	def get_domain(self):
+		return urlparse(self.link).netloc
 
 	category = models.ManyToManyField(Category)
 	pubDate = models.DateTimeField("Дата публикации", auto_now_add = True)
