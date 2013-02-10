@@ -1,1 +1,48 @@
 {% extends "base.html" %}
+
+{% block content %}
+	    <section class="content">
+        <div class="inner">
+
+            <aside class="themes-list-holder">
+                <ul class="theme-list">
+                	{% for category in category_list %}
+                    <li class="theme-item{% if forloop.first %} selected{% endif%}">
+                        <div class="active-arrow"></div>
+                        <div class="theme-icon-holder">
+                            <i class="theme-icn icn-{{ category.key }}"></i>
+                        </div>
+                        <span class="theme-name">{{ category.name }}</span>
+                    </li>
+                	{% endfor %}
+                </ul>
+            </aside>
+
+            <section class="recs-holder">
+            	{% for reccomendation in reccomendation_list %}
+                <article class="rec">
+                    <a href="#"><img class="rec-illustration" src="http://img-fotki.yandex.ru/get/6416/31684961.0/0_57718_8b34c7d4_L.jpg" alt=""></a>
+                    <h1>{{ reccomendation.name }}</h1>
+                    <p>{{ reccomendation.about }}</p>
+                    <p><a href="{{ reccomendation.link }}">Видеоролики Angry Birds по-русски</a></p>
+                    <p>
+                    	{% if reccomendation.link %}
+                        	<a class="tag home-tag"href="{{ reccomendation.link }}">{{ reccomendation.link }}</a>
+                       	{% endif %}
+                        {% if reccomendation.youtube %}
+                        	<a class="tag youtube-tag"href="{{ reccomendation.youtube }}">YouTube</a>
+                       	{% endif %}
+                       	{% if reccomendation.appstore %}
+                        	<a class="tag apple-tag"href="{{ reccomendation.appstore }}">App Store</a>
+                       	{% endif %}
+                       	{% if reccomendation.google %}
+                        	<a class="tag android-tag"href="{{ reccomendation.google }}">Android</a>
+                       	{% endif %}
+                    </p>
+                </article>
+                {% endfor %}
+            </section>
+
+        </div><!-- inner -->
+    </section><!-- content -->
+{% endblock %}
