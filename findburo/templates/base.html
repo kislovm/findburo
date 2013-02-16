@@ -1,3 +1,5 @@
+{% load verbatim2 %}
+
 <!doctype html>
 <head>
     <meta charset="UTF-8">
@@ -7,20 +9,79 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/static/js/underscore-min.js"></script>
+    <script src="/static/js/backbone-min.js"></script>
+    <script src="/static/js/swig-min.js"></script>
     <script>
-        $(function() {
-            $('.theme-item').click(function(event){
-                $('.theme-item').removeClass('selected');
-                $(this).addClass('selected');
-                if($(this).hasClass('grayBg') == true) {
-                    $('body').removeClass().addClass('gray')
-                } else if($(this).hasClass('woodBg') == true) {
-                    $('body').removeClass().addClass('wood')
-                } else if($(this).hasClass('blueBg') == true) {
-                    $('body').removeClass().addClass('blue')
-                }
-            });
+
+
+        var template = '{% verbatim2 "/home/bibi/findburo/findburo/templates/reccomendation.html" %}'
+
+        CategoryModel = Backbone.Model.extend({
+
+        })
+
+        ContentView = Backbone.View.extend({
+            
+            events: {
+                'click .theme-item': 'selectCategory'
+            },
+
+            selectCategory: function (e) {
+                var $this = $(e.currentTarget);
+                $this.siblings().removeClass('selected');
+                $this.addClass('selected');
+                this.model.set('category', $this.data('category'));
+                return false;
+            },
+
+            initialize: function(){                
+                this.model.bind('change', this.render, this);
+                this.delegateEvents();
+                this.views = [];
+            },
+
+            render: function(){
+                var category = this.model.get('category');
+                var view = this.views[category] || new ReccomendationView({
+                        collection: new ReccomendationCollection({ category: category }),
+                        el: this.$el.find('.recs-holder')
+                    });
+            }
+
         });
+
+        ReccomendationCollection = Backbone.Collection.extend({
+            url: '/category/', 
+            initialize: function(options) {
+                this.url += options.category + '/';
+            }
+        })
+
+        ReccomendationView = Backbone.View.extend({
+
+            template: swig.compile(template),
+
+            initialize: function(){
+                this.collection.fetch();
+                this.render();
+            },
+
+            render: function(){
+                var html = this.collection.each(function(item){
+
+                })
+                this.$el.html(this.template())
+            }
+
+        });
+
+        $(function() {
+            swig.init({});
+            var contentView = new ContentView({ el: '.content', model: new CategoryModel })
+        });
+
+
     </script>
 </head>
 <body class="wood">

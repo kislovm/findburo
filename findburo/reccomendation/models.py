@@ -9,6 +9,8 @@ class Category(models.Model):
 	name = models.CharField(max_length=100)
 	def __unicode__(self):
 		return self.name
+	def reccomendations(self):
+		return Reccomendation.objects.filter(category=self).order_by('-pubDate')
 
 class Reccomendation(models.Model):
 	name = models.CharField("Заголовок",max_length=200)
@@ -17,6 +19,8 @@ class Reccomendation(models.Model):
 	appstore = models.URLField("Аппстор", blank=True)
 	google = models.URLField("Гугл Плэй", blank=True)
 	youtube = models.URLField("Ютуб", blank=True)
+	facebook = models.URLField("Facebook", blank=True)
+	vk = models.URLField("Вконтакте", blank=True)
 	link = models.URLField("Ссылка", blank=True)
 	def get_domain(self):
 		return urlparse(self.link).netloc
@@ -25,6 +29,20 @@ class Reccomendation(models.Model):
 
 	category = models.ManyToManyField(Category)
 	pubDate = models.DateTimeField("Дата публикации", auto_now_add = True)
+
+	def template(self):
+		return {
+				"name" : self.name,
+				"photo" : self.photo(),
+				"about" : self.about,
+				"appstore" : self.appstore,
+				"google" : self.google,
+				"youtube" : self.youtube,
+				"facebook" : self.facebook,
+				"vk" : self.vk,
+				"link" : self.link,
+				"get_domain" : self.get_domain,
+			}
 
 	def __unicode__(self):
 		return self.name

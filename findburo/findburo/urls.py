@@ -6,8 +6,10 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'findburo.views.index', name='home'),
+    url(r'^$', 'findburo.views.index'),
+    url(r'^category/(?P<key>\w+)/$', 'reccomendation.views.category_reccomendations'),
     # url(r'^findburo/', include('findburo.foo.urls')),
+    url(r'^(?P<category>\w+)/$', 'findburo.views.index'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

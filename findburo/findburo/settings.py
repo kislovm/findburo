@@ -56,7 +56,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = '/home/bibi/static/'
+STATIC_ROOT = '/home/bibi/findburo/findburo/static/'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -119,6 +119,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'south',
     'reccomendation',
+    'findburo',
     'sorl.thumbnail',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
@@ -161,3 +162,7 @@ CACHES = {
         'LOCATION': '127.0.0.1:11211',
     }
 }
+
+ALLOWED_INCLUDE_ROOTS = (
+    '/home/bibi/findburo/findburo/templates',
+)
