@@ -7,4 +7,4 @@ def category_reccomendations(request, key):
 	json_serializer = serializers.get_serializer("json")()
 	category = Category.objects.filter(key=key)[0]
 	response = [ x.template() for x in category.reccomendations() ]
-	return HttpResponse(response)
+	return HttpResponse(json.dumps(response), mimetype="application/json")

@@ -6,6 +6,7 @@
 
 // Variables 
 $default-border-radius: 5px
+$main-font-color: black
 $icons: sprite-map("icons/*.png")
 
 
@@ -49,7 +50,8 @@ body
 a 
     +link-colors(#2970c4, #21599f, #1b4982, #2970c4, #21599f)
     text-decoration: none
-
+strong, b
+    font-weight: bold
 .logo 
     background: image-url('logo.png')
     display: block
@@ -109,6 +111,7 @@ a
     +single-box-shadow(rgba(0,0,0,.8), 0, 2px, 2px, -1px)
 
 .theme-name 
+    color: $main-font-color
     float: left
     margin: 17px 10px 0 
 
@@ -151,10 +154,11 @@ a
         left: 10%
     h1 
         font-size: 2.2em
+        line-height: 1.2em
         font-weight: bold
-        padding: .5em 5%
+        padding: .5em 5% .3em
     p 
-        font-size: 1.4em
+        font-size: 1.5em
         padding: .5em 5%
         a
             border-bottom: solid 1px adjust-lightness(#2970c4, 45%)
@@ -167,10 +171,10 @@ a
     font-size: 0.9em
     color: white !important
     display: inline-block
-    margin-right: 5px
+    margin: 0 5px 5px 0
     padding: 3px 7px 2px
     +border-radius(5px)
-    +opacity(.7)
+    +opacity(.9)
     &:hover
         +opacity(100)
 .youtube-tag
@@ -178,9 +182,15 @@ a
 .home-tag
     background: #346cd2
 .apple-tag
-    background: #a39fa7
+    background: #7e7c78
 .android-tag
     background: #51a72c
+.map-tag
+    background: #e4ac30
+.fb-tag
+    background: #395993
+.vk-tag
+    background: #6185aa
 
 // Icons
 i

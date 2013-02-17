@@ -12,6 +12,9 @@
     <script src="/static/js/underscore-min.js"></script>
     <script src="/static/js/backbone-min.js"></script>
     <script src="/static/js/swig-min.js"></script>
+    <style>
+    .theme-name{ color:black; }
+    </style>
     <script>
 
 
@@ -44,7 +47,7 @@
             render: function(){
                 var category = this.model.get('category');
                 var view = this.views[category] || new ReccomendationView({
-                        collection: new ReccomendationCollection({ category: category }),
+                        collection: new ReccomendationCollection(),
                         el: this.$el.find('.recs-holder')
                     });
             }
@@ -54,7 +57,7 @@
         ReccomendationCollection = Backbone.Collection.extend({
             url: '/category/', 
             initialize: function(options) {
-                this.url += options.category + '/';
+                this.url += '/city/';
             }
         })
 
@@ -63,15 +66,21 @@
             template: swig.compile(template),
 
             initialize: function(){
-                this.collection.fetch();
-                this.render();
+		var that = this;
+                this.collection.bind('change', that.render, that);
+		this.collection.fetch();
+		this.render();
             },
 
             render: function(){
-                var html = this.collection.each(function(item){
-
-                })
-                this.$el.html(this.template())
+		var that = this,
+                    html = "";
+		console.log(this.collection.toJSON())
+		this.collection.each(function(item){
+			html += this.template(item.toJSON())
+			console.log(html)
+                });
+                this.$el.html(html);
             }
 
         });
@@ -95,5 +104,6 @@
     {% endblock %}
 
     <footer></footer>
+<!-- Yandex.Metrika counter --><script type="text/javascript">var yaParams = {/*Здесь параметры визита*/};</script><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20109490 = new Ya.Metrika({id:20109490, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true,params:window.yaParams||{ }}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/20109490" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
 </body>
 </html>

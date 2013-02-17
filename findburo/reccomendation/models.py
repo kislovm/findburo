@@ -10,7 +10,7 @@ class Category(models.Model):
 	def __unicode__(self):
 		return self.name
 	def reccomendations(self):
-		return Reccomendation.objects.filter(category=self).order_by('-pubDate')
+		return Reccomendation.objects.filter(category=self).order_by('-weight','-pubDate')
 
 class Reccomendation(models.Model):
 	name = models.CharField("Заголовок",max_length=200)
@@ -22,6 +22,7 @@ class Reccomendation(models.Model):
 	facebook = models.URLField("Facebook", blank=True)
 	vk = models.URLField("Вконтакте", blank=True)
 	link = models.URLField("Ссылка", blank=True)
+	weight = models.IntegerField("Вес", default=10)
 	def get_domain(self):
 		return urlparse(self.link).netloc
 	def photo(self):
@@ -33,7 +34,7 @@ class Reccomendation(models.Model):
 	def template(self):
 		return {
 				"name" : self.name,
-				"photo" : self.photo(),
+				"photo" : self.photo().url,
 				"about" : self.about,
 				"appstore" : self.appstore,
 				"google" : self.google,
@@ -41,7 +42,7 @@ class Reccomendation(models.Model):
 				"facebook" : self.facebook,
 				"vk" : self.vk,
 				"link" : self.link,
-				"get_domain" : self.get_domain,
+				"get_domain" : self.get_domain(),
 			}
 
 	def __unicode__(self):

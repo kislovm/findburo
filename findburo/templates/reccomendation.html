@@ -1,20 +1,19 @@
-<article class="rec">
-    <a href="{{ reccomendation.link }}"><img class="rec-illustration" src="{{ reccomendation }}" alt="{{ reccomendation.name }}"></a>
+<article class="rec" style="color:black;">
+    <a href="{{ reccomendation.link }}" target="_blank"><img class="rec-illustration" src="{{ reccomendation.photo.url }}" alt="{{ reccomendation.name }}"></a>
     <h1>{{ reccomendation.name }}</h1>
-    <p>{{ reccomendation.about|safe }}</p>
-    <p><a href="{{ reccomendation.link }}">Видеоролики Angry Birds по-русски</a></p>
+    {{ reccomendation.about|safe|linebreaks }}
     <p>
     	{% if reccomendation.link %}
-        	<a class="tag home-tag" href="{{ reccomendation.link }}">{{ reccomendation.link }}</a>
+	       	<a class="tag home-tag" target="_blank" href="{{ reccomendation.link }}">{{ reccomendation.get_domain }}</a>
        	{% endif %}
         {% if reccomendation.youtube %}
-        	<a class="tag youtube-tag" href="{{ reccomendation.youtube }}">YouTube</a>
+        	<a class="tag youtube-tag" target="_blank" href="{{ reccomendation.youtube }}">YouTube</a>
        	{% endif %}
        	{% if reccomendation.appstore %}
-        	<a class="tag apple-tag" href="{{ reccomendation.appstore }}">App Store</a>
+        	<a class="tag apple-tag" target="_blank" href="{{ reccomendation.appstore }}">App Store</a>
        	{% endif %}
        	{% if reccomendation.google %}
-        	<a class="tag android-tag" href="{{ reccomendation.google }}">Android</a>
+        	<a class="tag android-tag" target="_blank" href="{{ reccomendation.google }}">Android</a>
        	{% endif %}
     </p>
 </article>

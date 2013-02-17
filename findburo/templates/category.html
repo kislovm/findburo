@@ -1,7 +1,9 @@
-<li class="theme-item{% if forloop.first %} selected{% endif%}" data-category="{{ category.key }}">
+<a href="/{{ category.key }}">
+<li class="theme-item{% if category.key == selected.key %} selected{% endif %}" data-category="{{ category.key }}">
     <div class="active-arrow"></div>
     <div class="theme-icon-holder">
         <i class="theme-icn icn-{{ category.key }}"></i>
     </div>
     <span class="theme-name">{{ category.name }}</span>
 </li>
+</a>
