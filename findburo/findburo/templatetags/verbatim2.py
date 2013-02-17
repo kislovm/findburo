@@ -70,3 +70,4 @@ def verbatim2(parser, token):
                                       " must be 'parsed'" % bits[0])
     filepath = parser.compile_filter(bits[1])
     return VerbatimNode(filepath, parsed)
+    

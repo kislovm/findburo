@@ -11,12 +11,12 @@
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="/static/js/underscore-min.js"></script>
     <script src="/static/js/backbone-min.js"></script>
+    <script src="/static/js/filters.js"></script>
     <script src="/static/js/swig-min.js"></script>
-    <style>
-    .theme-name{ color:black; }
-    </style>
     <script>
 
+
+        swig.init({ filters : customFilters });
 
         var template = '{% verbatim2 "/home/bibi/findburo/findburo/templates/reccomendation.html" %}'
 
@@ -31,11 +31,12 @@
             },
 
             selectCategory: function (e) {
+                e.preventDefault();
                 var $this = $(e.currentTarget);
+                if ($this.hasClass('selected')) return false;
                 $this.siblings().removeClass('selected');
                 $this.addClass('selected');
                 this.model.set('category', $this.data('category'));
-                return false;
             },
 
             initialize: function(){                
@@ -47,7 +48,7 @@
             render: function(){
                 var category = this.model.get('category');
                 var view = this.views[category] || new ReccomendationView({
-                        collection: new ReccomendationCollection(),
+                        collection: new ReccomendationCollection([], { category: category }),
                         el: this.$el.find('.recs-holder')
                     });
             }
@@ -55,9 +56,9 @@
         });
 
         ReccomendationCollection = Backbone.Collection.extend({
-            url: '/category/', 
-            initialize: function(options) {
-                this.url += '/city/';
+            url: '/category/',
+            initialize: function(models, options){
+                this.url += options.category + '/'
             }
         })
 
@@ -66,19 +67,18 @@
             template: swig.compile(template),
 
             initialize: function(){
-		var that = this;
-                this.collection.bind('change', that.render, that);
-		this.collection.fetch();
-		this.render();
+                var that = this;
+                this.collection.bind('reset', this.render, this);
+                this.collection.fetch();
+                a = this.collection;
             },
 
             render: function(){
-		var that = this,
+                var that = this,
                     html = "";
-		console.log(this.collection.toJSON())
-		this.collection.each(function(item){
-			html += this.template(item.toJSON())
-			console.log(html)
+                this.collection.each(function(item){
+                    html += that.template({ reccomendation : item.toJSON() });
+                    console.log(html)
                 });
                 this.$el.html(html);
             }
@@ -86,7 +86,6 @@
         });
 
         $(function() {
-            swig.init({});
             var contentView = new ContentView({ el: '.content', model: new CategoryModel })
         });
 

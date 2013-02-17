@@ -34,7 +34,7 @@ class Reccomendation(models.Model):
 	def template(self):
 		return {
 				"name" : self.name,
-				"photo" : self.photo().url,
+				"photo" : { "url" : self.photo().url },
 				"about" : self.about,
 				"appstore" : self.appstore,
 				"google" : self.google,
