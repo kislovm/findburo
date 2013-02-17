@@ -33,11 +33,11 @@
             selectCategory: function (e) {
                 e.preventDefault();
                 var $this = $(e.currentTarget);
-                if ($this.hasClass('selected')) return false;
+                //if ($this.hasClass('selected')) return false;
                 $this.siblings().removeClass('selected');
                 $this.addClass('selected');
                 this.model.set('category', $this.data('category'));
-                $('body').scrollTop(0);
+                $('body').animate({ scrollTop: 0 }, 400);
             },
 
             initialize: function(){                
