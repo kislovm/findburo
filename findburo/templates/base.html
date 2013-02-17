@@ -37,6 +37,7 @@
                 $this.siblings().removeClass('selected');
                 $this.addClass('selected');
                 this.model.set('category', $this.data('category'));
+                $('window').scrollTop(0);
             },
 
             initialize: function(){                
@@ -78,7 +79,6 @@
                     html = "";
                 this.collection.each(function(item){
                     html += that.template({ reccomendation : item.toJSON() });
-                    console.log(html)
                 });
                 this.$el.html(html);
             }
