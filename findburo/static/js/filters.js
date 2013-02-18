@@ -2,7 +2,6 @@ window.customFilters = {};
 
 customFilters.linebreaks = function(input) {
     if(!input) return '';
-    debugger;
     var strings = input.split(/(\r\n){2,}/g); 
     result = ''; 
     for (var i=0;i < strings.length;i++){
