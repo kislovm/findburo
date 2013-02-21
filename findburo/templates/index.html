@@ -13,17 +13,18 @@
                 </ul>
             </aside>
 
+            <div class="main-banner">
+                <span class="banner-text">
+                    Вы заработали достижение <b>«Первый просмотр»</b> и получили 5 очков <a href="#" onclick="yaCounter20109490.reachGoal('register');">зарегистрируйтесь</a>, чтобы их сохранить.
+                </span>
+                <div class="banner-btn-holder">
+                    <a href="#" onclick="yaCounter20109490.reachGoal('register'); return true;" class="small-btn red-btn">Зарегистрироваться</a>
+                    <a href="#" onclick="yaCounter20109490.reachGoal('sign_in'); return true;" class="small-btn gray-btn">Войти</a>
+                </div>
+            </div>
+
             <section class="recs-holder not-signed-in">
 
-                <div class="main-banner">
-                    <span class="banner-text">
-                        Вы заработали достижение <b>«Первый просмотр»</b> и получили 5 очков <a onclick="yaCounter20109490.reachGoal('register');">зарегистрируйтесь</a>, чтобы их сохранить.
-                    </span>
-                    <div class="banner-btn-holder">
-                        <a href="#" onclick="yaCounter20109490.reachGoal('register'); return true;" class="small-btn red-btn">Зарегистрироваться</a>
-                        <a href="#" onclick="yaCounter20109490.reachGoal('sign_in'); return true;" class="small-btn gray-btn">Войти</a>
-                    </div>
-                </div>
             	{% for reccomendation in reccomendation_list %}
                     {% include "reccomendation.html" %}
                 {% endfor %}
