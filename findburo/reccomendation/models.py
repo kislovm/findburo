@@ -3,6 +3,7 @@
 from django.db import models
 from sorl.thumbnail import ImageField, get_thumbnail
 from urlparse import urlparse
+import random
 
 class Category(models.Model):
 	key = models.CharField(max_length=50)
@@ -30,6 +31,9 @@ class Reccomendation(models.Model):
 
 	category = models.ManyToManyField(Category)
 	pubDate = models.DateTimeField("Дата публикации", auto_now_add = True)
+	def commentsCount(self):
+		random.seed(self.name)
+		return random.randrange(5,20)	
 
 	def template(self):
 		return {
@@ -43,6 +47,7 @@ class Reccomendation(models.Model):
 				"vk" : self.vk,
 				"link" : self.link,
 				"get_domain" : self.get_domain(),
+				"commentsCount" : self.commentsCount(),
 			}
 
 	def __unicode__(self):
