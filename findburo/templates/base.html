@@ -18,7 +18,45 @@
 
         swig.init({ filters : customFilters });
 
-        var template = '{% verbatim2 "/home/bibi/findburo/findburo/templates/reccomendation.html" %}'
+        PopupView = Backbone.View.extend({
+
+            el: 'body',
+
+            events: {
+                'click .close-popup-btn': 'close',
+                'click .popup-bg': 'close',
+                'click .popup-container': 'close',
+                'click .show-password': 'showPassword'
+            },
+
+            template: swig.compile('{% verbatim2 "/home/bibi/findburo/findburo/templates/popup.html" %}'),
+            
+            showPassword: function(e){
+                e.preventDefault();
+                if (!this.passwordInput || !this.passwordSwitcher){
+                    this.passwordInput = this.$el.find('.password-input');
+                    this.passwordSwitcher = this.$el.find('.show-password');
+                }
+                this.passwordInput.prop('type') == 'password' ?
+                    this.passwordInput.prop('type', 'text') && this.passwordSwitcher.text('скрыть'):
+                    this.passwordInput.prop('type', 'password') && this.passwordSwitcher.text('показать');
+            },
+
+            render: function(){
+                if (!this.popup){                    
+                    this.popup = $(this.template());
+                    $('body').prepend(this.popup);
+                }
+                this.popup.show();
+            },
+
+            close: function(e){
+                if(e.currentTarget == e.target){
+                    e.preventDefault();
+                    this.popup.hide();
+                }
+            }
+        })
 
         CategoryModel = Backbone.Model.extend({
 
@@ -27,7 +65,8 @@
         ContentView = Backbone.View.extend({
             
             events: {
-                'click .theme-item': 'selectCategory'
+                'click .theme-item': 'selectCategory',
+                'click .register': 'openRegisterPopup'
             },
 
             selectCategory: function (e) {
@@ -44,6 +83,12 @@
                 this.model.bind('change', this.render, this);
                 this.delegateEvents();
                 this.views = [];
+            },
+
+            openRegisterPopup : function(e) {
+                e.preventDefault();
+                if (!this.registerPopup) this.registerPopup = new PopupView();
+                this.registerPopup.render();
             },
 
             render: function(){
@@ -65,7 +110,7 @@
 
         ReccomendationView = Backbone.View.extend({
 
-            template: swig.compile(template),
+            template: swig.compile('{% verbatim2 "/home/bibi/findburo/findburo/templates/reccomendation.html" %}'),
 
             initialize: function(){
                 var that = this;
