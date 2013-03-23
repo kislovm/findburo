@@ -64,14 +64,18 @@
                 if (!this.popup){                    
                     this.popup = $(this.template());
                     $('body').prepend(this.popup);
+                    this.popup.container = $(this.popup[0]);
                 }
-                this.popup.show();
+                this.popup.container.addClass('showing')
+                $('html').css({'overflow':'hidden'})
+                
             },
 
             close: function(e){
                 if(e.currentTarget == e.target){
                     e.preventDefault();
-                    this.popup.hide();
+                    $('.popup-container').removeClass('showing');
+                    $('html').css({'overflow':''})
                 }
             }
         })
@@ -114,7 +118,6 @@
                 var that = this;
                 $('.register').click(function(e) { 
                     that.openRegisterPopup(e);
-                    console.log(123);
                 });
             },
 
@@ -122,7 +125,6 @@
                 e.preventDefault();
                 if (!this.registerPopup) this.registerPopup = new PopupView();
                 this.registerPopup.render();
-                debugger;
             },
 
             render: function(){
