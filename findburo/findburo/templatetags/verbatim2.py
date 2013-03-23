@@ -33,7 +33,7 @@ class VerbatimNode(Node):
                     return "[Included template had syntax error: %s]" % e
                 else:
                     return '' # Fail silently for invalid included templates.
-        return output.replace('\n','')
+        return output.replace('\n','').replace('\'','\\\'')
 
 def include_is_allowed(filepath):
     for root in settings.ALLOWED_INCLUDE_ROOTS:

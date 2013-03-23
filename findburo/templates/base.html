@@ -13,6 +13,24 @@
     <script src="/static/js/backbone-min.js"></script>
     <script src="/static/js/filters.js"></script>
     <script src="/static/js/swig-min.js"></script>
+    <script type="text/javascript" src="//vk.com/js/api/openapi.js?79"></script>
+    <style>
+        .vk-like { display: inline; float: right; }
+        .fb-like { display: inline; float: right; margin-right: 10px; }
+    </style>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1&appId=457573554313836";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script type="text/javascript">
+        VK.init({apiId: 3463354, onlyWidgets: true});
+    </script>
+
     <script>
 
 
@@ -62,6 +80,16 @@
 
         })
 
+        setLikes = function(){
+		var like = $('<div id="vk-like">');
+		$('body').append(like);
+		VK.Widgets.Like('vk-like', { type: 'button', verb: 1 });
+                $('.vk-like').each(function(){
+                $(this).append($('#vk-like'));
+        });
+
+        }
+
         ContentView = Backbone.View.extend({
             
             events: {
@@ -83,12 +111,18 @@
                 this.model.bind('change', this.render, this);
                 this.delegateEvents();
                 this.views = [];
+                var that = this;
+                $('.register').click(function(e) { 
+                    that.openRegisterPopup(e);
+                    console.log(123);
+                });
             },
 
             openRegisterPopup : function(e) {
                 e.preventDefault();
                 if (!this.registerPopup) this.registerPopup = new PopupView();
                 this.registerPopup.render();
+                debugger;
             },
 
             render: function(){
@@ -126,12 +160,14 @@
                     html += that.template({ reccomendation : item.toJSON() });
                 });
                 this.$el.html(html);
+                setLikes();
             }
 
         });
 
         $(function() {
             var contentView = new ContentView({ el: '.content', model: new CategoryModel })
+            setLikes();
         });
 
 
@@ -141,7 +177,10 @@
     <header class="site-main-header">
         <div class="inner">
             <a href="/" class="logo"></a>
-            <a href="#" onclick="yaCounter20109490.reachGoal('add'); return true;" class="add-recomendation">Добавить рекомендацию <i class="icn-plus"></i></a>
+            <b>
+                <a href="#" class="nav-item">Войти</a>
+                <a href="#" class="nav-item register">Зарегистрироваться</a>
+            </b>
         </div>
     </header>
     {% block content %}

@@ -25,5 +25,5 @@
 
                <div class="split-buttons-holder double-btn group">
                     <a href="#" onclick="yaCounter20109490.reachGoal('add-banner');"  class="small-btn green-btn"><i class="icn-add-rec"></i>Добавить рекомендацию</a>
-                    <a href="#" onclick="yaCounter20109490.reachGoal('discuss-banner');" class="small-btn green-btn"><i class="icn-discussion"></i>Спросить мнение друзей</a>
+                    <a href="#" onclick="yaCounter20109490.reachGoal('discuss-banner');" class="small-btn green-btn"><i class="icn-discussion"></i>Создать обсуждение</a>
                 </div>

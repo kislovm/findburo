@@ -12,10 +12,11 @@
                 	{% endfor %}
                 </ul>
             </aside>
+
             <div class="main-banner banner-big-font">
-                <span class="banner-text">Спросите друзей из Вконтакте и Facebook, какие развлечения для них были самыми интересными за последнее время</span>
+                <span class="banner-text">Узнайте, какие игры понравились больше всего вашим друзьям из Вконтакте и Facebook.</span>
                 <div class="banner-btn-holder">
-                    <a href="#" onclick="yaCounter20109490.reachGoal('know');" class="small-btn red-btn sign-up-popup">Спросить</a>
+                    <a href="#" onclick=""yaCounter20109490.reachGoal('know'); class="small-btn red-btn sign-up-popup">Узнать</a>
                     <!-- <a href="#" class="small-btn gray-btn">Войти</a> -->
                 </div>
             </div>
